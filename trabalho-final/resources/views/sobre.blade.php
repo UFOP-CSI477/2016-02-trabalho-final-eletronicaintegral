@@ -10,17 +10,7 @@
                     <div class="panel-heading">Sobre</div>
                     <div class="panel-body">
 
-                        A eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalalA eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalal
-                        A eletronica, lalalalalaalalalal
+                        A eletronica :D 
 
 
                     </div>
