@@ -46,7 +46,7 @@
                         <li><a href="#">Inicio</a></li>
                         <li><a href="{{url('login')}}">Sistema</a></li>
 
-                        <li><a href="#">Sobre</a></li>
+                        <li><a href="{{url('sobre')}}">Sobre</a></li>
                         <li><a href="#">Contato</a></li>
 
                         @if(Auth::check())

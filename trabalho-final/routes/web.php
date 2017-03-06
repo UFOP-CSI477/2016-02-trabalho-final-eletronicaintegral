@@ -16,3 +16,6 @@ Route::get('/', 'OrdemController@index');
 
 Route::resource('ordems', 'OrdemController');
 
+Route::get('sobre', function (){
+    return view('sobre');
+});
