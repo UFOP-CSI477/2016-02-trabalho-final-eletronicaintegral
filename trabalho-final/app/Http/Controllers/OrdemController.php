@@ -46,6 +46,7 @@ class OrdemController extends Controller
     public function store(Request $request)
     {
         Ordem::create($request->all());
+        session()->flash('flash_message', 'Ordem criada com sucesso!');
         return redirect('/ordems');
     }
 
@@ -99,4 +100,16 @@ class OrdemController extends Controller
     {
         //
     }
+
+    public function search ()
+    {
+        return view('ordem.search');
+    }
+
+    public function exibir(Request $request) {
+        $ordem = Ordem::find($request->id);
+        return view('ordem.show')->with('ordem', $ordem);
+        //    dd($request);
+    }
+
 }

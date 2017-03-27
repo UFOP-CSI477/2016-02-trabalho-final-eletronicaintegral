@@ -1,24 +1,23 @@
 @extends('layouts.app')
 
-@section('content')
+@section('conteudo')
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Lista de Ordens @if(Auth::check()) @if(Auth::user()->type == 2)<a class="btn btn-xs btn-default pull-right" href="{{url('ordems/create')}}">Nova Ordem</a>@endif @endif</div>
+
+        <div class="panel-heading"><h2>Lista de Ordem de Serviço </h2> @if(Auth::check()) @if(Auth::user()->type == 2)<a class="btn btn-xs btn-default pull-right" href="{{url('ordems/create')}}">Nova Ordem</a>@endif @endif</div>
 
                     <div class="panel-body">
                         <table class="table table-responsive table-bordered table-hover">
 
                             <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>Cliente</th>
                                 <th>Orçamento</th>
                                 <th>Status</th>
                                 <th>Aprovado</th>
-                                {{--@if(\Illuminate\Support\Facades\Auth::check())--}}
+                                @if(Auth::user()->type == 2)
                                 <th>Ações</th>
-                                {{--@endif--}}
+                                @endif
                             </tr>
                             </thead>
                             <tbody>
@@ -26,6 +25,7 @@
                                 @if(Auth::user()->type == 2)
                                     @foreach($ordems as $o)
                                         <tr>
+                                            <td>{{ $o->id }}</td>
                                             <td>{{ $o->user()->first()->nome }}</td>
                                             <td>R$ {!! $o->orcamento !!}</td>
                                             <td>{!! $o->status !!}</td>
@@ -83,7 +83,5 @@
                         {{--<button class="btn btn-default" onclick="history.back()"><i class="fa fa-arrow-left"></i> Voltar</button>--}}
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
 @endsection

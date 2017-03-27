@@ -19,3 +19,13 @@ Route::resource('ordems', 'OrdemController');
 Route::get('sobre', function (){
     return view('sobre');
 });
+
+Route::get('/search', 'OrdemController@search');
+
+
+Route::get('/searches/{id}', function ($id) {
+    $ordems = DB::table('ordems')->find($id);
+    return view('ordem.show')->with('ordems', $ordems);
+});
+
+Route::post('/search','OrdemController@exibir');

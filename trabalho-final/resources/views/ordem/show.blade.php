@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
-@section('content')
+@section('conteudo')
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Ordem Serviço</div>
+
+        <div class="panel-heading"><h2>Ordem de Serviço</h2></div>
                     <div class="panel-body">
                         {!! Form::model($ordem, ['method' => 'GET', 'route'=> ['ordems.index'], 'class' => 'form-horizontal']) !!}
 
@@ -140,7 +138,5 @@
 
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
 @endsection
